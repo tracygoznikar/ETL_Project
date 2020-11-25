@@ -1,4 +1,4 @@
-![]("https://github.com/tracygoznikar/ETL_Project/blob/main/Images/download.jfif")
+![("https://github.com/tracygoznikar/ETL_Project/blob/main/Images/download.jfif")]
 # ETL Technical Report
 ## Purpose
 <blockquote>The purpose of this project is to introduce students to extracting, transforming, and loading data into a database for retrieval. The requirements of this ETL Project included the following:
