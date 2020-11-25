@@ -8,17 +8,17 @@
     <li> A technical report must be submitted which details sources of data, type of files, type of database, and expected output</li>
 </ul>
 </blockquote>
+
 ## Extracting Data Sources
 <blockquote>The first data source we used was from Kaggle. We used the <a href="https://www.kaggle.com/mylesoneill/world-university-rankings">World University Rankings</a> dataset. Its comprised of three separate ranking sources that attempt to rank institutions of higher education from best to worst. One list is from the Tiimes Higher Education World University Ranking, the other from Academic Ranking of World Universities (aka Shanghai Ranking), and the third is from the Center for World University Rankings. The second data source comprises <a href="https://www.kaggle.com/jessemostipak/college-tuition-diversity-and-pay?select=tuition_cost.csv">tuition</a> costs. All files are in comma-separated format.
 <br>
 <br>
-
 These 3 rankings use different criteria to rank universities. Therefore, there are not many columns of data that are the same but it will be interesting to see where a university ranks on one list compared to another. The tuition cost file provides more detail about the institutions such as whether or not they're 2 or 4 year, public, private or for-profit, and includes the state the school is located in which isn't available in the ranking files.
 <br>
 <br>
-
 We used Pandas within a Jupyter Notebook to handle all phases of ETL.
 </blockquote>
+
 ## Transformation
 <blockquote>The only column of data present in all files is the name of the university. This is not ideal to have a name field as the primary key. We decided to only focus on schools in the U.S. Also, the files cover different ranking years. Years 2012-2015 are the only years present in all 3 ranking files. Additionally, the tuition cost file only covers the 2018-19 academic year. With that we filtered 2 of the ranking files on the year field and country field. The Shanghai Ranking file didn't include a country column but we also found a crosswalk file which simply listed university names and country. We were able to merge these two lists and then filter(.loc) only U.S. schools to create a final dataframe for the Shanghai ranking.
 <br>
@@ -27,7 +27,7 @@ Additionally, there were no duplicates in any of the files as each school was li
 </blockquote>
 
 ## Loading
-<blockquote>We loaded all data into a sql database using pgAdmin. We have a total of 4 tables, 1 for each of the different rankings, and a table for the tuition costs. The user has the option to join data using the school name or simply to view data one ranking at a time.<blockquote>
+<blockquote>We loaded all data into a sql database using pgAdmin. We have a total of 4 tables, 1 for each of the different rankings, and a table for the tuition costs. The user has the option to join data using the school name or simply to view data one ranking at a time.</blockquote>
 
 ## Challenges
 
